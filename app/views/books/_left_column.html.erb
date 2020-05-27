@@ -1,0 +1,32 @@
+
+
+    <!-- ユーザー紹介 -->
+    <h2>User info</h2>
+      <%= attachment_image_tag user, :profile_image, :fill, 100, 100, fallback: "no_image.jpg" %>
+    <table class="table">
+      <tr>
+        <td><strong>name</strong></td>
+        <td><%= user.name %></td>
+      </tr>
+      <tr>
+        <td><strong>introduction</strong></td>
+        <td><%= user.introduction %></td>
+      </tr>
+    </table>
+    <div>
+      <%= link_to edit_user_path(current_user.id), class: "edit_user_#{user.id}, btn btn-default btn-block" do %>
+        <span class="glyphicon glyphicon-wrench" aria-hidden="true"></span>
+      <% end %>
+    </div>
+
+    <!-- 本の一覧 -->
+    <div>
+      <h2>New book</h2>
+      <%= form_for(book) do |f| %>
+      <p><strong>Title</strong>
+      <%= f.text_field :title, class: "book_title f_book" %></p>
+      <p><strong>Opinion</strong>
+        <%= f.text_area :body, class: "book_body f_book" %></p>
+      <p><%= f.submit "Create Book", class: "btn btn-primary btn-block" %></p>
+      <% end %>
+    </div>

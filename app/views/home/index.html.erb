@@ -1,0 +1,14 @@
+<h1>welcome to <span class="glyphicon glyphicon-book" aria-hidden="true"></span>Bookers !!</h1>
+<p>In <span class="glyphicon glyphicon-book" aria-hidden="true"></span><strong>Bookers</strong>,</p>
+<p>you can share and exchange your opinions , inpressions , and emotions</p>
+<p>about varioius books!</p>
+
+<!-- サインアップ/ログインボタン -->
+<div class="home_btn_wrapper">
+  <div class="row">
+    <%= link_to "Log in", new_user_session_path, class: "sign_in btn btn-info btn-block home_btn" %>
+  </div>
+  <div class="row">
+  <%= link_to "Sign Up", new_user_registration_path, class: "sign_up btn btn-success btn-block home_btn" %>
+  </div>
+</div>

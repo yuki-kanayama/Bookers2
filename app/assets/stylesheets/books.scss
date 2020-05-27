@@ -1,0 +1,16 @@
+// Place all the styles related to the Books controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.f_book {
+  width: 100%
+}
+
+/*　ボタンの文字色を変更（home/index home/about books/edit）　*/
+.btn_txt_color {
+  color: #666;
+}
+
+.btn_txt_color:hover {
+  color: #fff;
+  text-decoration: underline;
+}
